@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <style>
+    body { margin: 0; padding: 16px; font-family: Arial, sans-serif; }
+    .swiper { width: 100%; }
+    .swiper-slide {
+      display:flex; justify-content:center; align-items:center;
+      border-radius: 12px; overflow: hidden;
+      background: #f3f3f3;
+      aspect-ratio: 16/9;
+    }
+    .swiper-slide img { width: 100%; height: 100%; object-fit: cover; }
+  </style>
+</head>
+<body>
+
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="https://drive.google.com/file/d/1IAxR64u-JHfF1wI4PRrCEtuf12AxfX3G/view?usp=sharing" alt=""></div>
+      <div class="swiper-slide"><img src="GIF_URL_2" alt=""></div>
+      <div class="swiper-slide"><img src="GIF_URL_3" alt=""></div>
+      <div class="swiper-slide"><img src="GIF_URL_4" alt=""></div>
+      <div class="swiper-slide"><img src="GIF_URL_5" alt=""></div>
+    </div>
+
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    new Swiper('.swiper', {
+      slidesPerView: 3,
+      spaceBetween: 12,
+      loop: true,
+      autoplay: { delay: 2500, disableOnInteraction: false },
+      navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+      pagination: { el: '.swiper-pagination', clickable: true },
+      breakpoints: {
+        0:   { slidesPerView: 1 },
+        700: { slidesPerView: 2 },
+        1000:{ slidesPerView: 3 }
+      }
+    });
+  </script>
+</body>
+</html>
